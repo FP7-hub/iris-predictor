@@ -1,0 +1,63 @@
+Iris Predictor
+========================================================
+author: Francesco Pipitone
+date: June 24, 2026
+transition: fade
+
+Project goal
+========================================================
+
+- **Idea**: classify a flower from the built-in `iris` dataset in a simple and visual way.
+- **Target user**: anyone who wants to understand a Shiny app without advanced knowledge.
+- **Strength**: essential interface with integrated documentation.
+
+Why it is useful:
+
+- it shows a complete example of input, server logic, and reactive output;
+- it uses a dataset already included in R;
+- it is easy to deploy to shinyapps.io.
+
+How the app works
+========================================================
+
+- The user enters 4 flower measurements.
+- The user selects the number of neighbors `k`.
+- The user clicks **Predict species**.
+- The server applies the **k-NN** algorithm to the `iris` dataset.
+- The app returns:
+    - the **predicted species**;
+    - an **estimated confidence**;
+    - a **plot** showing the new point;
+    - the **5 most similar cases**.
+
+Embedded R code
+========================================================
+
+```{r}
+summary(iris)
+```
+
+This document runs R code during rendering and shows a summary of the dataset used by the app.
+
+Why the app meets the assignment requirements
+========================================================
+
+- **UI input**: sliders, radio buttons, checkbox, action button.
+- **Operations in `server.R`**: standardization, distances, classification.
+- **Reactive outputs**: text, table, plot.
+- **Documentation**: included directly inside the app, in the *How to use* tab.
+- **Deployment**: the project is ready for `rsconnect::deployApp()` on shinyapps.io.
+
+Conclusion
+========================================================
+
+**Iris Predictor** is a simple, complete, and easy-to-evaluate project.
+
+Final message:
+
+- clear interface;
+- understandable reactive logic;
+- integrated documentation;
+- reproducible HTML5 presentation.
+
+Thank you!
